@@ -13,6 +13,11 @@ def test_two_num_strings_trailing(pn):
     assert pn.comparator('1-', '100foo') == 2
     assert pn.comparator('0.1', '100-+') == 3
 
+def test_non_pos_num(pn):
+    assert pn.comparator('1', '0') is None
+    assert pn.comparator('1', '-1') is None
+    
+
 def test_non_num(pn):
     assert pn.comparator('foo', 'bar') is None
     assert pn.comparator('12', '100foo.') is None

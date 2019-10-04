@@ -1,4 +1,5 @@
 import re
+import math
 
 from dedupe.variables.base import FieldType
 from dedupe.variables.price import PriceType
@@ -43,8 +44,14 @@ class PositiveNumberType(FieldType):
             return None
 
         try:
-            return PriceType.comparator(num_1, num_2)
+            score = PriceType.comparator(num_1, num_2)
         except ValueError:
             return None
+        else:
+            if math.isnan(score):
+                return None
+            else:
+                return score
+            
 
     
