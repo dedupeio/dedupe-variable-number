@@ -13,8 +13,8 @@ matrix:
     language: generic
     before_install:
     - brew update
-    - brew install python3
-    - virtualenv env -p python3
+    - brew install python
+    - virtualenv env -p python
     - source env/bin/activate
 install:
 - pip install --upgrade pip
