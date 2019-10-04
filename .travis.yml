@@ -9,12 +9,6 @@ matrix:
     python: 3.5
   - os: linux
     python: 3.6
-  - os: osx
-    language: generic
-    before_install:
-    - brew install python
-    - virtualenv env -p python
-    - source env/bin/activate
 install:
 - pip install --upgrade pip
 - pip install --upgrade -r dev-requirements.txt
