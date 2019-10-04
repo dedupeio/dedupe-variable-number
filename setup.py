@@ -7,7 +7,7 @@ except ImportError :
 setup(
     name='dedupe-variable-number',
     url='https://github.com/datamade/dedupe-variables-number',
-    version='0.0.5',
+    version='0.0.1',
     description='Employer variable type for dedupe',
     packages=['dedupe.variables'],
     install_requires=['dedupe'],

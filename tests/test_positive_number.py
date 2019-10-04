@@ -26,6 +26,8 @@ def test_non_num(pn):
 def test_predicates(pn):
     assert number.orderOfMagnitude('100') == ('2',)
     assert number.orderOfMagnitude('100foo') == ('2',)
+    assert number.orderOfMagnitude('-100foo') == ()
     assert number.roundTo1('100') == ('100',)
     assert number.roundTo1('150') == ('200',)
+    assert number.roundTo1('-150') == ('-200',)
 
