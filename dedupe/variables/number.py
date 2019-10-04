@@ -10,13 +10,13 @@ def non_digit_strip(field):
 
 def orderOfMagnitude(field):
     try:
-        return dedupe.predicates.orderOfMagnitude(float(field.strip()))
+        return dedupe.predicates.orderOfMagnitude(float(non_digit_strip(field)))
     except ValueError:
         return ()
 
 def roundTo1(field):
     try:
-        return dedupe.predicates.roundTo1(float(field.strip()))
+        return dedupe.predicates.roundTo1(float(non_digit_strip(field)))
     except ValueError:
         return ()
 
